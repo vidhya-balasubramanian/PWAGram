@@ -3,17 +3,17 @@
     "short_name": "PWAGram",
     "icons": [
         {
-            "src": "/images/icons/app-icon-48x48.png",
+            "src": "./images/icons/app-icon-48x48.png",
             "type": "image/png",
             "sizes": "48x48"
         },
         {
-            "src": "/images/icons/app-icon-96x96.png",
+            "src": "./images/icons/app-icon-96x96.png",
             "type": "image/png",
             "sizes": "96x96"
         }
     ],
-    "start_url": "/index.html",
+    "start_url": "./index.html",
     "scope": ".",
     "display": "standalone",
     "background_color": "#fff",
