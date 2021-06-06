@@ -13,13 +13,20 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
-
+    <!-- this will support chrome and other pwa supported browsers  -->
     <link rel="manifest" href="manifest.json" />
-    
+    <!-- for safari  -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-status-title" content="PWAGram" />
+    <link rel="apple-touch-icon" href="/images/icons/apple-app-icon-144x144.png" sizes="144x144"/>
   </head>
   <body>
     <header>
       <p>PWAGram</p>
     </header>
+    <button  id="addButton" onclick="addtoHomeScreen()" style="position: absolute;right: 1px;bottom:20px">Add app to homescreen</button>
+    <script src="./app.js"></script>
+
   </body>
 </html>
