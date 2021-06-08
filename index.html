@@ -5,6 +5,7 @@
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="favicon.ico" />
   <title>PWAGram</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -115,3 +116,51 @@
 <script src="js/feed.js"></script>
 </body>
 </html>
+
+
+
+<!-- 
+if ("serviceWorker" in navigator) {
+    // Register a service worker hosted at the root of the
+    // site using the default scope.
+    navigator.serviceWorker.register("service-worker.js").then(
+      function (registration) {
+        console.log("Service worker registration succeeded:", registration);
+      },
+      function (error) {
+        console.log("Service worker registration failed:", error);
+      }
+    );
+  } else {
+    console.log("Service workers are not supported.");
+  }
+
+  let deferredPrompt;
+
+  window.addEventListener("beforeinstallprompt", (e) => {
+    // Prevent Chrome 67 and earlier from automatically showing the prompt
+    e.preventDefault();
+    // Stash the event so it can be triggered later.
+
+    deferredPrompt = e;
+    // Update UI to notify the user they can add to home screen
+    const addBtn = document.getElementById("addButton");
+
+    addBtn.style.display = "block";
+
+    addBtn.addEventListener("click", (e) => {
+      // hide our user interface that shows our A2HS button
+      addBtn.style.display = "none";
+      // Show the prompt
+      deferredPrompt.prompt();
+      // Wait for the user to respond to the prompt
+      deferredPrompt.userChoice.then((choiceResult) => {
+        if (choiceResult.outcome === "accepted") {
+          console.log("User accepted the A2HS prompt");
+        } else {
+          console.log("User dismissed the A2HS prompt");
+        }
+        deferredPrompt = null;
+      });
+    });
+  }); -->
